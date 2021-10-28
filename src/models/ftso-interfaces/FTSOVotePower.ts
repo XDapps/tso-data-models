@@ -1,5 +1,5 @@
 import { BigNumber, ethers } from "ethers";
-import { FTSO_REWARDS_MANAGER_API, PRICE_SUBMITTER_ABI, TEST_MNEMONIC } from '../../constants/abis'
+import { FTSO_REWARDS_MANAGER_API, PRICE_SUBMITTER_ABI } from '../../constants/abis'
 import { WVP_TOKEN_API } from "../../";
 
 

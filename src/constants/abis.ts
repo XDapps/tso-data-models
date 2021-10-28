@@ -1,6 +1,6 @@
 export const FTSO_REGISTRY_ABI = ["function getSupportedIndices() external view returns(uint256[] memory _supportedIndices)", 'function getFtso(uint256 _assetIndex) external view returns(IIFtso _activeFtso)', 'function getSupportedSymbols() external view returns(string[] memory _supportedSymbols)', 'function getFtsos(uint256[] memory _assetIndices) external view returns(IFtsoGenesis[] memory _ftsos)', "function getCurrentPrice(uint256 _assetIndex) external view returns(uint256 _price, uint256 _timestamp)"];
 export const PRICE_SUBMITTER_ABI = ["function submitPriceHashes(uint256[] memory _ftsoIndices, bytes32[] memory _hashes) external", "function revealPrices(uint256 _epochId, uint256[] memory _ftsoIndices, uint256[] memory _prices, uint256[] memory _randoms) external",];
-export const TEST_MNEMONIC = "riot bitter fish try tiger crystal banana picture inherit sort snow picture";
+
 export const WVP_TOKEN_API = [
   "function undelegateAll() external",
   "function votePowerOfAt(address _owner, uint256 _blockNumber) external view returns(uint256)",
