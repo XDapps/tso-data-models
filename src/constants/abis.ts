@@ -16,6 +16,9 @@ export const WVP_TOKEN_API = [
 ];
 export const FTSO_REWARDS_MANAGER_API = [
   "function claimReward(address payable _recipient, uint256[] memory _rewardEpochs)external returns(uint256 _rewardAmount)",
+  "function getEpochsWithClaimableRewards() external",
+  "function getEpochsWithUnclaimedRewards(address _beneficiary) external",
+  "function getUnclaimedReward(uint256 _rewardEpoch,address _dataProvider)external view",
   "function getStateOfRewards(address _beneficiary, uint256 _rewardEpoch) external view returns(address[] memory _dataProviders,uint256[] memory _rewardAmounts, bool[] memory _claimed,bool _claimable)"
 ];
 export const FTSO_MANAGER_ABI = ["function active() external view returns (bool)", 'function getPriceSubmitter() external view returns (IPriceSubmitter)', 'function getCurrentRewardEpoch() external view returns (uint256)', 'function getRewardEpochVotePowerBlock(uint256 _rewardEpoch) external view returns (uint256)', "function getCurrentPriceEpochData() external view returns(uint256 _priceEpochId, uint256 _priceEpochStartTimestamp, uint256 _priceEpochEndTimestamp, uint256 _priceEpochRevealEndTimestamp, uint256 _currentTimestamp)"];

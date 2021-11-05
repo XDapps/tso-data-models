@@ -26,7 +26,7 @@ export class AssetSubmission {
 
   getRandomInt() {
     let min = Math.ceil(1);
-    let max = Math.floor(1000000);
+    let max = Math.floor(Number.MAX_SAFE_INTEGER);
     return Math.floor(Math.random() * (max - min));
 
 
@@ -43,7 +43,7 @@ export class AssetSubmission {
 
 
 export class AssetSubmissionFactory {
-  static fromFirebaseObject(fbObject:  any): AssetSubmission {
+  static fromFirebaseObject(fbObject: any): AssetSubmission {
     const valueToReturn = new AssetSubmission(fbObject.epochNumber, fbObject.assetName, fbObject.assetIndex, fbObject.price.toNumber(), fbObject.offsetUsed);
     valueToReturn.random = fbObject.random;
     return valueToReturn;
