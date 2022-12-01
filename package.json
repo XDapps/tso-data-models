@@ -1,6 +1,6 @@
 {
   "name": "tso-data-models",
-  "version": "2.0.16",
+  "version": "2.0.19",
   "description": "",
   "main": "lib/index.js",
   "types": "lib",

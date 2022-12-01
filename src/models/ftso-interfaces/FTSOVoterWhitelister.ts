@@ -1,5 +1,5 @@
 import { BigNumber, ethers } from "ethers";
-import { PRICE_SUBMITTER_ABI, TEST_MNEMONIC } from '../../constants/abis';
+import { PRICE_SUBMITTER_ABI } from '../../constants/abis';
 
 export class FTSOVoterWhitelister {
   ftsoIndex: number;
@@ -13,13 +13,13 @@ export class FTSOVoterWhitelister {
   }
 
   async requestFullVoterWhitelisting(): Promise<any> {
-    const testWallet: ethers.Wallet = ethers.Wallet.fromMnemonic(TEST_MNEMONIC);
-    const abi = ["requestFullVoterWhitelisting(address _voter) external"];
-    const whitelisterContract = new ethers.Contract(this.whitelisterContractAddress, abi, testWallet);
-    return await whitelisterContract.requestFullVoterWhitelisting(this.voterAddress);
+  //  const testWallet: ethers.Wallet = ethers.Wallet.fromMnemonic(TEST_MNEMONIC);
+    const abi = ["function requestFullVoterWhitelisting(address _voter) external"];
+ //   const whitelisterContract = new ethers.Contract(this.whitelisterContractAddress, abi, testWallet);
+    //return await whitelisterContract.requestFullVoterWhitelisting(this.voterAddress);
   }
   async requestWhitelistingVoter(signer: ethers.Signer): Promise<any> {
-    const testWallet: ethers.Wallet = ethers.Wallet.fromMnemonic(TEST_MNEMONIC);
+  //  const testWallet: ethers.Wallet = ethers.Wallet.fromMnemonic(TEST_MNEMONIC);
     const abi = ["function requestWhitelistingVoter(address _voter, uint256 _ftsoIndex) public"];
    // const whitelisterContract = new ethers.Contract(FTSO_REGISTRY_ADDRESS, abi, testWallet);
   //  return await whitelisterContract.requestWhitelistingVoter(this.voterAddress, this.ftsoIndex);

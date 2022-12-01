@@ -123,6 +123,15 @@ export class DataPointFactory {
     itemToReturn.exchange = "Binance";
     return itemToReturn;
   }
+  static fromBitrueAPIResponseObject(jsonData: Record<string, any>, base: string, quoted: string, ts: number): DataPoint {
+    const itemToReturn: DataPoint = new DataPoint();
+    itemToReturn.baseCurrency = base;
+    itemToReturn.quoteCurrency = quoted;
+    itemToReturn.price = parseFloat(jsonData.price);
+    itemToReturn.time = ts;
+    itemToReturn.exchange = "Binance";
+    return itemToReturn;
+  }
   static fromBittrexAPIResponseObject(jsonData: Record<string, any>, base: string, quoted: string): DataPoint {
     const itemToReturn: DataPoint = new DataPoint();
     itemToReturn.baseCurrency = base;
